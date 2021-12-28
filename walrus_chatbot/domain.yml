@@ -1,0 +1,121 @@
+actions:
+- action_reset_all_slot
+- action_chat_restart
+
+entities:
+- date
+- fee
+- location
+- 끝날짜
+- 날짜
+forms:
+- fac_form
+- ship_form
+- ship_form2
+intents:
+- ship_fee1
+- request_ship_info
+- greet
+- goodbye
+- affirm
+- deny
+- request_facility_info
+- wait
+- well
+- ask_shipfee
+- ask_freightfee
+- ask_latefee
+- ask_fee
+- ship_fee2
+- ship_fee3
+- reset
+- request_ship_info2
+- restart
+- trash
+responses:
+  utter_ask_date:
+  - text: 궁금하신 날짜를 입력해 주세요
+  utter_ask_end:
+  - text: 몇일 까지 검색할까요?
+  utter_ask_end1:
+  - text: '연체고지일을 입력해주세요 ex)20211001:'
+  utter_ask_location:
+  - text: 원하는 장소를 말해주세요
+  utter_ask_money1:
+  - text: '고지금액을 입력해주세요 ex)3000: '
+  utter_ask_price:
+  - buttons:
+    - payload: /ship_fee1
+      title: 선박료
+    - payload: /ship_fee2
+      title: 화물료
+    - payload: /ship_fee3
+      title: 연체료
+    text: 어떤 사용료를 계산할까요?
+  utter_ask_shipName:
+  - text: 선박이름 입력해주세요
+  utter_ask_start:
+  - text: 언제로 검색할까요?
+  utter_ask_start1:
+  - text: '납부기한을 입력해주세요 ex)20210801:'
+  utter_default:
+  - text: 잘 못 알아들었어요! 다시 말씀해주세요.
+  utter_fallback:
+  - text: 잘못 입력했어요~
+  utter_feedback:
+  - text: 좋아요 :) 추천이 마음에 드셨나요?
+  utter_freightfee:
+  - text: 화물료 계산을 원하시면 다음 버튼을 눌러주세요 !!!
+  utter_get_needs:
+  - text: 이용 중간에 대화를 초기화하고 싶으시면 '리셋'을 입력하세요.
+  utter_get_time:
+  - text: 원하는 일시를 말해주세요
+  utter_goodbye:
+  - text: 감사합니다! 다시 시작하려면 reset을 입력해주세요
+  utter_greet:
+  - text: "안녕하세요 스마트해상물류 챗봇입니다. 선박운항정보, 시설사용허가현황, 시설사용료 계산 기능이 있습니다.\n\nEx) 오늘 부산항\
+      \ 선박정보 알려줘, 내일 인천항 시설사용허가현황 말해줘!, 사용료 계산이라고 검색해주세요."
+  utter_greet2:
+  - text: "보고 싶은 정보 카테고리를 골라주세요!!"
+    buttons:
+    - title: "시설사용허가정보"
+      payload: "/request_facility_info"
+    - title: "선박운항정보"
+      payload: "/request_ship_info"
+    - title: "사용료계산"
+      payload: "/ask_fee"
+  utter_shipfee:
+  - text: 선박료 계산을 원하시면 다음 버튼을 눌러주세요 &&&
+  utter_latefee:
+  - text: 연체료 계산을 원하시면 다음 버튼을 눌러주세요 ***
+  utter_restart:
+  - text: 다시 시작 하였습니다!
+session_config:
+  carry_over_slots_to_new_session: true
+  session_expiration_time: 60
+slots:
+  date:
+    type: unfeaturized
+    auto_fill: false
+  end:
+    type: text
+  end1:
+    type: text
+  fee:
+    type: text
+  location:
+    type: text
+  matches:
+    type: unfeaturized
+  money1:
+    type: text
+  requested_slot:
+    type: unfeaturized
+  shipName:
+    type: unfeaturized
+  start:
+    type: text
+  start1:
+    type: text
+  시작날짜:
+    type: unfeaturized

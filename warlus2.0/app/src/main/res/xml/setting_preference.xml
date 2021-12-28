@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="이름">
+        <EditTextPreference
+            android:defaultValue="이름 입력"
+            android:key="key_userName"
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="사용자 이름 설정"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="설정">
+
+        <SwitchPreference
+            android:key="sound"
+            android:title="소리"/>
+
+
+    </PreferenceCategory>
+    <ListPreference
+        android:defaultValue="0"
+        android:entries="@array/array_size"
+        android:entryValues="@array/array_size_value"
+        android:key="size_list"
+        android:summary="글자 크기, 화면 크기 등"
+        android:title="디스플레이 설정"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null"
+
+        />
+    <PreferenceScreen
+        android:key="version"
+        android:title="버전"
+        android:summary="10.1.1"/>
+
+</PreferenceScreen>

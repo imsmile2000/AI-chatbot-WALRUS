@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="array_size">
+        <item>글자크기</item>
+        <item>화면크기</item>
+    </string-array>
+
+    <string-array name="array_size_value">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="array_font">
+        <item>맑은 고딕</item>
+        <item>굴림체</item>
+        <item>궁서체</item>
+        <item>휴먼명조체</item>
+    </string-array>
+
+    <string-array name="array_color">
+        <item>검정</item>
+        <item>빨강</item>
+        <item>파랑</item>
+        <item>노랑</item>
+    </string-array>
+
+    <string-array name="array_color_value">
+        <item>#800000</item>
+        <item>#4B0082</item>
+        <item>#2F4F4F</item>
+        <item>#FF2313</item>
+    </string-array>
+
+
+    <string-array name="array_voice">
+        <item>딩동</item>
+        <item>또로롱</item>
+        <item>두둥탁</item>
+        <item>진동</item>
+    </string-array>
+</resources>

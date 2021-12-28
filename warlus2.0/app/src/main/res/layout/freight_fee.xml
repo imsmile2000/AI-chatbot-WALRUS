@@ -1,0 +1,825 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FreightFee">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:weightSum="9">
+
+                <TextView
+                    android:id="@+id/freight_textView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:textSize="18sp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:text="이용구분"
+                    android:fontFamily="@font/bmttf"
+                    android:textColor="@color/black"
+                    android:textAlignment="center"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:id="@+id/freight_textView2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:fontFamily="@font/bmttf"
+                        android:textColor="@color/black"
+                        android:gravity="center_vertical"
+                        android:text="항선택" />
+
+                    <RadioGroup
+                        android:id="@+id/freight_radiogroup_1"
+                        android:checkedButton="@id/freight_radio_busan"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="7"
+                        android:orientation="horizontal"
+                        android:weightSum="9">
+
+                        <RadioButton
+                            android:id="@+id/freight_radio_busan"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:fontFamily="@font/bmttf"
+                            android:textColor="@color/black"
+                            android:text="부산항" />
+
+                        <RadioButton
+                            android:id="@+id/freight_radio_incheon"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:fontFamily="@font/bmttf"
+                            android:textColor="@color/black"
+                            android:text="인천항" />
+
+                        <RadioButton
+                            android:id="@+id/freight_radio_etc"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:fontFamily="@font/bmttf"
+                            android:textColor="@color/black"
+                            android:text="기타항" />
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:id="@+id/freight_textView3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="center_vertical"
+                        android:fontFamily="@font/bmttf"
+                        android:textColor="@color/black"
+                        android:text="수출입 구분" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="7"
+                        android:orientation="vertical"
+                        android:weightSum="2">
+
+                        <RadioGroup
+                            android:id="@+id/freight_radiogroup_2"
+                            android:checkedButton="@id/freight_radio_outport"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+                            android:weightSum="10">
+
+                            <RadioButton
+                                android:id="@+id/freight_radio_outport"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="5"
+                                android:fontFamily="@font/bmttf"
+                                android:textColor="@color/black"
+                                android:text="외항" />
+
+                            <RadioButton
+                                android:id="@+id/freight_radio_inport"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="5"
+                                android:fontFamily="@font/bmttf"
+                                android:textColor="@color/black"
+                                android:text="내항" />
+                        </RadioGroup>
+
+                        <RadioGroup
+                            android:id="@+id/freight_radiogroup_3"
+                            android:checkedButton="@id/freight_radio_income"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+                            android:weightSum="10">
+
+                            <RadioButton
+                                android:id="@+id/freight_radio_income"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="5"
+                                android:fontFamily="@font/bmttf"
+                                android:textColor="@color/black"
+                                android:text="수입" />
+
+                            <RadioButton
+                                android:id="@+id/freight_radio_outcome"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="5"
+                                android:fontFamily="@font/bmttf"
+                                android:textColor="@color/black"
+                                android:text="수출" />
+                        </RadioGroup>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/freight_textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:fontFamily="@font/bmttf"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:text="화물료" />
+
+                    <ImageButton
+                        android:id="@+id/freight_btn_plus"
+                        android:src="@drawable/securityfee_drawable"
+                        android:layout_marginLeft="4dp"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+
+                        android:layout_weight="5"
+                        android:text="하역구분"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/bmttf"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:textAlignment="center"
+                        android:layout_weight="4"
+                        android:text="운임톤/개수"
+                        android:fontFamily="@font/bmttf"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:textAlignment="center"
+                        android:layout_weight="4.5"
+                        android:text="기본요금"
+                        android:fontFamily="@font/bmttf"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:textAlignment="center"
+                        android:layout_weight="2.5"
+                        android:text="면제"
+                        android:fontFamily="@font/bmttf"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Spinner
+                        android:id="@+id/freight_spinner1_kind"
+                        android:layout_weight="5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                    <EditText
+                        android:inputType="numberDecimal"
+                        android:id="@+id/freight_editText1"
+                        android:layout_weight="3.2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/freight_textview1_info"
+                        android:text="톤"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:fontFamily="@font/bmttf"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:gravity="right"
+                        android:id="@+id/freight_textview1_fee"
+                        android:text="0원"
+                        android:fontFamily="@font/bmttf"
+                        android:textColor="@color/black"
+                        android:layout_weight="3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                    <CheckBox
+                        android:layout_marginLeft="30dp"
+                        android:layout_gravity="right"
+                        android:id="@+id/freight_check1_discount"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text=""/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Spinner
+                        android:id="@+id/freight_spinner2_kind"
+                        android:layout_weight="5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                    <EditText
+                        android:inputType="numberDecimal"
+                        android:id="@+id/freight_editText2"
+                        android:layout_weight="3.2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/freight_textview2_info"
+                        android:text="톤"
+                        android:fontFamily="@font/bmttf"
+                        android:textColor="@color/black"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:gravity="right"
+                        android:id="@+id/freight_textview2_fee"
+                        android:text="0원"
+                        android:fontFamily="@font/bmttf"
+                        android:textColor="@color/black"
+                        android:layout_weight="3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                    <CheckBox
+                        android:layout_marginLeft="30dp"
+                        android:layout_gravity="right"
+                        android:id="@+id/freight_check2_discount"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text=""/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Spinner
+                        android:id="@+id/freight_spinner3_kind"
+                        android:layout_weight="5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                    <EditText
+                        android:inputType="numberDecimal"
+                        android:id="@+id/freight_editText3"
+                        android:layout_weight="3.2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/freight_textview3_info"
+                        android:text="톤"
+                        android:fontFamily="@font/bmttf"
+                        android:textColor="@color/black"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:gravity="right"
+                        android:id="@+id/freight_textview3_fee"
+                        android:text="0원"
+                        android:fontFamily="@font/bmttf"
+                        android:textColor="@color/black"
+                        android:layout_weight="3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                    <CheckBox
+                        android:layout_marginLeft="30dp"
+                        android:layout_gravity="right"
+                        android:id="@+id/freight_check3_discount"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text=""/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <Spinner
+                        android:id="@+id/freight_spinner4_kind"
+                        android:layout_weight="5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                    <EditText
+                        android:inputType="numberDecimal"
+                        android:id="@+id/freight_editText4"
+                        android:layout_weight="3.2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/freight_textview4_info"
+                        android:text="톤"
+                        android:fontFamily="@font/bmttf"
+                        android:textColor="@color/black"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:gravity="right"
+                        android:id="@+id/freight_textview4_fee"
+                        android:text="0원"
+                        android:fontFamily="@font/bmttf"
+                        android:textColor="@color/black"
+                        android:layout_weight="3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                    <CheckBox
+                        android:layout_marginLeft="30dp"
+                        android:layout_gravity="right"
+                        android:id="@+id/freight_check4_discount"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text=""/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <Spinner
+                        android:id="@+id/freight_spinner5_kind"
+                        android:layout_weight="5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                    <EditText
+                        android:inputType="numberDecimal"
+                        android:id="@+id/freight_editText5"
+                        android:layout_weight="3.2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/freight_textview5_info"
+                        android:text="톤"
+                        android:fontFamily="@font/bmttf"
+                        android:textColor="@color/black"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:gravity="right"
+                        android:id="@+id/freight_textview5_fee"
+                        android:text="0원"
+                        android:fontFamily="@font/bmttf"
+                        android:textColor="@color/black"
+                        android:layout_weight="3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                    <CheckBox
+                        android:layout_marginLeft="30dp"
+                        android:layout_gravity="right"
+                        android:id="@+id/freight_check5_discount"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text=""/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <Spinner
+                        android:id="@+id/freight_spinner6_kind"
+                        android:layout_weight="5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                    <EditText
+                        android:inputType="numberDecimal"
+                        android:id="@+id/freight_editText6"
+                        android:layout_weight="3.2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/freight_textview6_info"
+                        android:text="톤"
+                        android:fontFamily="@font/bmttf"
+                        android:textColor="@color/black"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:gravity="right"
+                        android:id="@+id/freight_textview6_fee"
+                        android:text="0원"
+                        android:fontFamily="@font/bmttf"
+                        android:textColor="@color/black"
+                        android:layout_weight="3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                    <CheckBox
+                        android:layout_marginLeft="30dp"
+                        android:layout_gravity="right"
+                        android:id="@+id/freight_check6_discount"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text=""/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Spinner
+                        android:id="@+id/freight_spinner7_kind"
+                        android:layout_weight="5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                    <EditText
+                        android:inputType="numberDecimal"
+                        android:id="@+id/freight_editText7"
+                        android:layout_weight="3.2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/freight_textview7_info"
+                        android:text="톤"
+                        android:fontFamily="@font/bmttf"
+                        android:textColor="@color/black"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:gravity="right"
+                        android:id="@+id/freight_textview7_fee"
+                        android:text="0원"
+                        android:fontFamily="@font/bmttf"
+                        android:textColor="@color/black"
+                        android:layout_weight="3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                    <CheckBox
+                        android:layout_marginLeft="30dp"
+                        android:layout_gravity="right"
+                        android:id="@+id/freight_check7_discount"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text=""/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <Spinner
+                        android:id="@+id/freight_spinner8_kind"
+                        android:layout_weight="5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                    <EditText
+                        android:inputType="numberDecimal"
+                        android:id="@+id/freight_editText8"
+                        android:layout_weight="3.2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/freight_textview8_info"
+                        android:text="톤"
+                        android:fontFamily="@font/bmttf"
+                        android:textColor="@color/black"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:gravity="right"
+                        android:id="@+id/freight_textview8_fee"
+                        android:text="0원"
+                        android:fontFamily="@font/bmttf"
+                        android:textColor="@color/black"
+                        android:layout_weight="3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                    <CheckBox
+                        android:layout_marginLeft="30dp"
+                        android:layout_gravity="right"
+                        android:id="@+id/freight_check8_discount"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text=""/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <Spinner
+                        android:id="@+id/freight_spinner9_kind"
+                        android:layout_weight="5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                    <EditText
+                        android:inputType="numberDecimal"
+                        android:id="@+id/freight_editText9"
+                        android:layout_weight="3.2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/freight_textview9_info"
+                        android:text="톤"
+                        android:fontFamily="@font/bmttf"
+                        android:textColor="@color/black"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:gravity="right"
+                        android:id="@+id/freight_textview9_fee"
+                        android:text="0원"
+                        android:fontFamily="@font/bmttf"
+                        android:textColor="@color/black"
+                        android:layout_weight="3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                    <CheckBox
+                        android:layout_marginLeft="30dp"
+                        android:layout_gravity="right"
+                        android:id="@+id/freight_check9_discount"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text=""/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_marginTop="30dp"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+
+                <TextView
+                    android:id="@+id/freight_textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/bmttf"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:text="화물입출항료" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="5"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:id="@+id/freight_textView5"
+                        android:fontFamily="@font/bmttf"
+                        android:textColor="@color/black"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="5"
+                        android:gravity="center_vertical"
+                        android:text="고지금액(화물료)" />
+
+                    <TextView
+                        android:id="@+id/freight_textview_freight"
+                        android:fontFamily="@font/bmttf"
+                        android:textColor="@color/black"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="7"
+                        android:text="0원"
+                        android:gravity="center" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="5"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:id="@+id/freight_textView7"
+                        android:fontFamily="@font/bmttf"
+                        android:textColor="@color/black"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="5"
+                        android:gravity="center_vertical"
+                        android:text="고지금액(화물보안료)" />
+
+                    <TextView
+                        android:id="@+id/freight_textview_security"
+                        android:fontFamily="@font/bmttf"
+                        android:textColor="@color/black"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="7"
+                        android:text="0원"
+                        android:gravity="center" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="5"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:id="@+id/freight_textView8"
+                        android:fontFamily="@font/bmttf"
+                        android:textColor="@color/black"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="5"
+                        android:gravity="center_vertical"
+                        android:text="고지금액(화물료+화물보안료)" />
+
+                    <TextView
+                        android:id="@+id/freight_textview_sum"
+                        android:fontFamily="@font/bmttf"
+                        android:textColor="@color/black"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="7"
+                        android:text="0원"
+                        android:gravity="center" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="30dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="10"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <Button
+                        android:id="@+id/freight_btn_calculate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:fontFamily="@font/bmttf"
+                        android:layout_marginRight="10dp"
+                        android:text="계산" />
+
+                    <Button
+                        android:id="@+id/freight_btn_reset"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:fontFamily="@font/bmttf"
+                        android:layout_marginLeft="10dp"
+                        android:text="초기화" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

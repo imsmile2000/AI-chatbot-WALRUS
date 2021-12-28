@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Chatbot">
+
+    <com.google.android.material.appbar.AppBarLayout android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorSecond"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+
+            <TextView
+                android:fontFamily="@font/bmttf"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Walrus"
+                android:textSize="28sp"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:translationY="0dp"
+                android:layout_marginEnd="16dp"
+                android:textColor="@android:color/white"/>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/message_list"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/message_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appbar"
+        app:layout_constraintVertical_bias="0.058" />
+
+    <com.google.android.material.textfield.TextInputLayout android:id="@+id/message_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/voice_button">
+
+        <EditText
+            android:id="@+id/message_box"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:autofillHints="@string/type_a_message"
+            android:background="@android:color/transparent"
+            android:hint="@string/type_a_message"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton android:id="@+id/voice_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/white"
+        android:src="@drawable/ic_voice"
+        app:fabSize="normal"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/message_view"
+        app:layout_constraintEnd_toStartOf="@id/send_button"
+        android:tint="@color/white"
+        android:scaleType="center"
+        app:maxImageSize="50dp"
+        app:borderWidth="0dp"
+        app:rippleColor="@color/white"
+        app:elevation="0dp"
+        android:contentDescription="@string/send"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton android:id="@+id/send_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/white"
+        android:src="@android:drawable/ic_menu_send"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/voice_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:tint="@color/white"
+        android:scaleType="center"
+        app:maxImageSize="50dp"
+        app:borderWidth="0dp"
+        app:rippleColor="@color/white"
+        app:elevation="0dp"
+        android:contentDescription="@string/send"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

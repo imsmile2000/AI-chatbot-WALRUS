@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ShippingFee">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="LabelFor,SpeakableTextPresentCheck">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/shipping_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textSize="18sp"
+                android:fontFamily="@font/bmttf"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+
+                android:text="선택사항" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/shipping_textView2"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:fontFamily="@font/bmttf"
+                    android:textColor="@color/black"
+
+                    android:text="면허 구분" />
+
+                <RadioGroup
+                    android:id="@+id/shipping_inout_rg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <RadioButton
+                        android:id="@+id/shipping_out_rb"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:fontFamily="@font/bmttf"
+                        android:textColor="@color/black"
+                        android:text="외항" />
+
+                    <RadioButton
+                        android:id="@+id/shipping_in_rb"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:fontFamily="@font/bmttf"
+                        android:textColor="@color/black"
+                        android:text="내항" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/shipping_textView3"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:fontFamily="@font/bmttf"
+                    android:textColor="@color/black"
+                    android:text="톤수" />
+
+                <EditText
+                    android:id="@+id/shipping_ton_et"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:hint=""
+                    android:inputType="number" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:fontFamily="@font/bmttf"
+                    android:textColor="@color/black"
+                    android:text="톤" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/shipping_textView7"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="할인률"
+                    android:fontFamily="@font/bmttf"
+                    android:textColor="@color/black"/>
+
+                <RadioGroup
+                    android:id="@+id/shipping_dc_rg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/shipping_dc1_rb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/bmttf"
+                        android:textColor="@color/black"
+                        android:text="없음" />
+
+                    <RadioButton
+                        android:id="@+id/shipping_dc2_rb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/bmttf"
+                        android:textColor="@color/black"
+                        android:text="10%" />
+
+                    <RadioButton
+                        android:id="@+id/shipping_dc3_rb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/bmttf"
+                        android:textColor="@color/black"
+                        android:text="20%" />
+
+                    <RadioButton
+                        android:id="@+id/shipping_dc4_rb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/bmttf"
+                        android:textColor="@color/black"
+                        android:text="50%" />
+
+                    <RadioButton
+                        android:id="@+id/shipping_dc5_rb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/bmttf"
+                        android:textColor="@color/black"
+                        android:text="70%" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/shipping_textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:textSize="18sp"
+                android:fontFamily="@font/bmttf"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:text="사용시간" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <TextView
+                    android:id="@+id/shipping_textView5"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:fontFamily="@font/bmttf"
+                    android:textColor="@color/black"
+                    android:text="시작시간" />
+
+                <Button
+                    android:id="@+id/shipping_datepickerbtn_start"
+                    style="?android:spinnerStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:hint="2021-01-01"
+                    android:fontFamily="@font/bmttf"
+                    android:textColor="@color/black" />
+
+                <Button
+                    android:id="@+id/shipping_timepickerbtn_start"
+                    style="?android:spinnerStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:hint="00:00"
+                    android:fontFamily="@font/bmttf"
+                    android:textColor="@color/black" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <TextView
+                    android:id="@+id/shipping_textView6"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:fontFamily="@font/bmttf"
+                    android:textColor="@color/black"
+                    android:text="종료시간" />
+
+                <Button
+                    android:id="@+id/shipping_datepickerbtn_end"
+                    style="?android:spinnerStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:hint="2021-01-01"
+                    android:fontFamily="@font/bmttf"
+                    android:textColor="@color/black" />
+
+                <Button
+                    android:id="@+id/shipping_timepickerbtn_end"
+                    style="?android:spinnerStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:hint="00:00"
+                    android:fontFamily="@font/bmttf"
+                    android:textColor="@color/black" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/shipping_textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:fontFamily="@font/bmttf"
+                android:textColor="@color/black"
+                android:text="계산 결과" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/shipping_textView9"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:fontFamily="@font/bmttf"
+                    android:textColor="@color/black"
+                    android:text="선박 입출항료:" />
+
+                <TextView
+                    android:id="@+id/shipping_fee1_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/bmttf"
+                    android:textColor="@color/black"
+                    android:text="0원"
+                    android:textAlignment="textEnd" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/shipping_textView11"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:fontFamily="@font/bmttf"
+                    android:textColor="@color/black"
+                    android:text="항로표지사용료:" />
+
+                <TextView
+                    android:id="@+id/shipping_fee2_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/bmttf"
+                    android:textColor="@color/black"
+                    android:text="0원"
+                    android:textAlignment="textEnd" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/shipping_textView13"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:fontFamily="@font/bmttf"
+                    android:textColor="@color/black"
+                    android:text="접안료:" />
+
+                <TextView
+                    android:id="@+id/shipping_fee3_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/bmttf"
+                    android:textColor="@color/black"
+                    android:text="0원"
+                    android:textAlignment="textEnd" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/shipping_textView15"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:fontFamily="@font/bmttf"
+                    android:textColor="@color/black"
+                    android:text="정박료:" />
+
+                <TextView
+                    android:id="@+id/shipping_fee4_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/bmttf"
+                    android:textColor="@color/black"
+                    android:text="0원"
+                    android:textAlignment="textEnd" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/shipping_textView17"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:fontFamily="@font/bmttf"
+                    android:textColor="@color/black"
+                    android:text="선박보안료:" />
+
+                <TextView
+                    android:id="@+id/shipping_fee5_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/bmttf"
+                    android:textColor="@color/black"
+                    android:text="0원"
+                    android:textAlignment="textEnd" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="@drawable/titlebackground">
+
+                <TextView
+                    android:id="@+id/shipping_textView19"
+
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical"
+                    android:fontFamily="@font/bmttf"
+                    android:textColor="@color/black"
+                    android:text="총합:" />
+
+                <TextView
+                    android:id="@+id/shipping_totalfee_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0원"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/bmttf"
+                    android:textColor="@color/black"
+                    android:textAlignment="textEnd" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="10"
+                android:layout_marginTop="30dp">
+
+                <Button
+                    android:id="@+id/shipping_cal_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="5"
+                    android:fontFamily="@font/bmttf"
+                    android:text="계산" />
+
+                <Button
+                    android:id="@+id/shipping_reset_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="5"
+                    android:fontFamily="@font/bmttf"
+                    android:text="초기화" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

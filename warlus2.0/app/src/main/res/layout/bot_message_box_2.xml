@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="4dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="52dp">
+
+
+            <LinearLayout
+                android:id="@+id/message_list_linlay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bot_rounded_corners"
+                android:orientation="vertical"
+                android:textAlignment="viewEnd"
+                android:weightSum="1">
+
+
+                <TextView
+                    android:id="@+id/message_tv"
+                    style="@style/messageFromBot"
+                    android:layout_width="wrap_content"
+                    android:maxWidth="300dp"
+                    android:padding="4dp"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    tools:text="@string/type_a_message" />
+
+                <!--<TextView android:id="@+id/time_tv"
+                style="@style/messageFromBot"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="4dp"
+                android:textSize="12sp"
+                tools:text="@tools:sample/date/hhmm"/>-->
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--<androidx.recyclerview.widget.RecyclerView android:id="@+id/button_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/message_list_linlay"/>-->
+    </LinearLayout>
+</FrameLayout>
